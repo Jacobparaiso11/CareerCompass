@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Compass: Your Future, Decoded</title>
+<link rel="icon" type="image/png" href="Careecompasslogo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar"><div class="nav-container">
+<div class="nav-logo"><img src="Careecompasslogo.png" alt="Career Compass logo"><span>Career Compass</span></div>
+<ul class="nav-menu">
+<li><a href="#home" class="nav-link">Home</a></li>
+<li><a href="#explore" class="nav-link">Explore Careers</a></li>
+<li><a href="#quiz" class="nav-link">Take Quiz</a></li>
+<li><a href="#about" class="nav-link">About</a></li>
+</ul></div></nav>
+
+<section id="home" class="hero" style="padding-top:80px"><div class="hero-content">
+<h1>Your Future, <span class="highlight">Decoded</span></h1>
+<p>Discover career paths that align with your personality, skills, and interests through interactive exploration and personalized assessments.</p>
+<div class="hero-buttons">
+<button class="btn btn-primary" onclick="go('quiz')">Take Career Quiz</button>
+<button class="btn btn-secondary" onclick="go('explore')">Explore Careers</button>
+</div></div></section>
+
+<section id="explore" style="background:#f8fafc"><div class="container">
+<h2>Explore Career Categories</h2>
+<p class="sub">Choose a strand and discover the programs and careers that fit each cluster</p>
+<div class="tabs"><button class="tab on" id="tA" onclick="show('A')">Academic</button><button class="tab" id="tT" onclick="show('T')">TechPro</button></div>
+<div class="grid" id="cards"></div>
+</div></section>
+
+<div id="modal" class="modal"><div class="mc"><span class="close" onclick="closeM()">&times;</span><div id="mbody"></div></div></div>
+
+<section id="quiz" class="quiz"><div class="container">
+<h2>Career Discovery Quiz</h2>
+<p class="sub">20 questions: 10 for Academic and 10 for TechPro. Select the option that best describes you for each statement.</p>
+<div class="qc">
+<div class="bar"><div id="prog"></div></div>
+<div class="cnt"><span id="cur">1</span> / <span id="tot">20</span></div>
+<div class="qcard"><h3 id="qt"></h3><div class="opts" id="opts"></div></div>
+<div class="nav2">
+<button id="prev" class="btn btn-outline" disabled>Previous</button>
+<button id="next" class="btn btn-primary" disabled>Next</button>
+<button id="sub" class="btn btn-success" style="display:none">Get Results</button>
+</div></div></div></section>
+
+<section id="results" class="res"><div class="container">
+<h2>Your Career Matches</h2>
+<div id="rc"></div>
+<div class="ra"><button class="btn btn-outline" onclick="retake()">Retake Quiz</button> <button class="btn btn-primary" onclick="go('explore')">Explore Careers</button></div>
+</div></section>
+
+<section id="about" class="about"><div class="container">
+<h2>About Career Compass</h2>
+<h3 class="s">Our Vision</h3>
+<p class="t">Our vision is to empower students to confidently choose their future careers by giving them access to clear and reliable guidance. We strive to promote informed and wise decision-making among learners. In the future, we hope this platform will become a helpful and trusted digital tool for career exploration.</p>
+<h3 class="s">Our Mission</h3>
+<p class="t">Our mission is to provide a simple and interactive career guidance platform that helps students explore different strands and career opportunities. We aim to support learners in choosing a strand that matches their interests, skills, and abilities. Through this website, we want to guide students in making better decisions about their academic and career paths.</p>
+<div class="grid" style="margin-top:2.5rem">
+<div class="feat"><h4>Self-Awareness</h4><p>Understand your strengths, interests, and personality traits</p></div>
+<div class="feat"><h4>Critical Thinking</h4><p>Make informed decisions based on self-reflection and analysis</p></div>
+<div class="feat"><h4>Academic Planning</h4><p>Get guidance on choosing the right strand, college program, and career path that fit you</p></div>
+</div></div></section>
+
+<footer>
+<div class="fc"><h3>Contact Us</h3>
+<div><b>Email:</b> careercompass@gmail.com</div>
+<div><b>Phone:</b> +63 912 345 6789</div>
+<div><b>Facebook:</b> Career Compass: Your Future, Decoded</div>
+<div><b>Location:</b> Philippines</div></div>
+<div class="fb">© 2026 Career Compass. Empowering students to discover their future.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
